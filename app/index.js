@@ -4,6 +4,9 @@
   // include index.html for webpack to load
   require("./index.html");
 
+  // pull in the stylesheet
+  require("./css/style.css");
+
   var Reveal = require("reveal.js");
   require("reveal.js/css/reveal.css");
   // uncomment theme you want to load below
@@ -12,6 +15,9 @@
 
   Reveal.initialize({
     history: true,
+    backgroundTransition: "none",
+    transition: "fade-out",
+    transitionSpeed: "slow"
     // More info https://github.com/hakimel/reveal.js#dependencies
    /* dependencies: [
       { src: 'plugin/markdown/marked.js' },

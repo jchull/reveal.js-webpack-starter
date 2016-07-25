@@ -1,0 +1,65 @@
+@keyframes bg-slide {
+    from { transform: translateY(0); }
+    to { transform: translateY(60vh); }
+}
+
+@keyframes branding-fade {
+    from { opacity: 0; }
+    to   { opacity: .8; }
+}
+
+
+.reveal .slide-background{
+    background-image: url("../images/denver-skyline-bare.svg");
+    background-size: cover;
+    background-position: center top;
+}
+
+.reveal .slide-background:nth-of-type(1){
+    transform: translateY(0);
+}
+
+.reveal .slide-background:nth-child(2).present{
+    animation-iteration-count: 1;
+    animation: bg-slide 3s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.reveal .backgrounds .slide-background:nth-child(n+3),
+.reveal .slide-background:nth-child(2).past {
+    animation: none;
+    transform: translateY(60vh);
+}
+
+.reveal .backgrounds .slide-background:nth-child(n+2):before,
+.reveal .backgrounds .slide-background:nth-child(n+2):after{
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    bottom: 62vh;
+    height: 30px;
+    width: 300px;
+    top: auto;
+    left: auto;
+    right: auto;
+    opacity: 0;
+    animation: branding-fade ease-in 5s 1s forwards;
+}
+
+.reveal .backgrounds .slide-background:nth-child(n+2):before  {
+    content: "Coderado Limited";
+    left: 20px;
+}
+
+.reveal .backgrounds .slide-background:nth-child(n+2):after {
+    content: "http://coderado.co";
+    right: 20px;
+}
+
+.reveal .backgrounds .slide-background:last-child:before ,
+.reveal .backgrounds .slide-background:last-child:after {
+    animation: none;
+    display: none;
+}

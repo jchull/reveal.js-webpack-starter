@@ -7,6 +7,9 @@
 
   <title>TODO: Change Title</title>
 
+  <!-- CSS is included via webpack require
+
+  <link href="css/style.css" type="text/css" rel="stylesheet">
 
   <!-- Printing and PDF exports -->
   <!-- <script>
@@ -20,8 +23,51 @@
 <body>
 <div class="reveal">
   <div class="slides">
-    <section>TODO: Add Title Slide</section>
-    <section>TODO: Add Content Slides</section>
+    <section data-transition="fade-out">
+        <h1>TODO: Change Title</h1>
+        <br/>
+        <h3>Jeremy Hull</h3>
+        <h3>Coderado Limited</h3>
+        <h6>@coderado</h6>
+    </section>
+
+    <section>
+      <h2 class="fragment fade-down">Introduction</h2>
+
+      <div class="fragment fade-up">
+        <p class="fragment highlight-current-blue">Subtopic 1</p>
+
+        <p class="fragment highlight-current-blue">Subtopic 2</p>
+
+        <p class="fragment highlight-current-blue">Subtopic 3</p>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="fragment fade-down">Subtopic 1, Slide 1</h2>
+      <div class="fragment fade-up">
+        <p class="fragment highlight-current-blue">Item 1</p>
+        <p class="fragment highlight-current-blue">Item 2</p>
+        <p class="fragment highlight-current-blue">Item 3</p>
+      </div>
+    </section>
+
+    <!--
+      TODO: Additional slides
+      -->
+
+
+    <!-- end slide -->
+    <section data-transition="fade-in" data-speed="slow">
+      <h1>Thank You</h1>
+      <br/>
+      <h3>Jeremy Hull</h3>
+      <h3>Coderado Limited</h3>
+      <h6 class="fragment highlight-blue">@coderado</h6>
+      <br/>
+      <br/>
+    </section>
   </div>
 </div>
 

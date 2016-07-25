@@ -25,10 +25,6 @@
     module: {
       loaders: [
         {
-          test: /\.css$/,
-          loader: "style!css"
-        },
-        {
           test: /\.eot(\?\S*)?$/,
           loader: 'url-loader?limit=100000&mimetype=application/vnd.ms-fontobject'
         },
@@ -50,7 +46,7 @@
         },
         {
           test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-          loader: "url-loader?limit=10000&mimetype=image/svg+xml"
+          loader: "svg-url-loader?limit=10000&mimetype=image/svg+xml"
         },
         {
           test: /\.html$/,
@@ -63,6 +59,10 @@
         {
           test: /\.png$/,
           loader: "url-loader?mimetype=image/png"
+        },
+        {
+          test: /\.css$/,
+          loader: "style!css"
         },
         {
           test: /index\.html/,
