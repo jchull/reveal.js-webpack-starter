@@ -10,7 +10,7 @@ You should have index.html and app/ directly inside your project folder now
 `npm install`
 
 4.Start Webpack Development Server
-`npm serve`
+`npm run serve`
 
 5.View Presentation
 Hot Module Reloading: http://localhost:8080/webpack-dev-server/

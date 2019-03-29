@@ -5,9 +5,8 @@
   require("./index.html");
 
   var Reveal = require("reveal.js");
-  require("reveal.js/css/reveal.css");
-  // uncomment theme you want to load below
-  require("reveal.js/css/theme/night.css");
+  import(/* webpackPrefetch: true */ 'reveal.js/css/reveal.css');
+  import(/* webpackPrefetch: true */ 'reveal.js/css/theme/night.css');
 
 
   Reveal.initialize({
