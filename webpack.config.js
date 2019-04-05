@@ -115,7 +115,6 @@ var config = {
       // chunkFilename: "[id].css"
     }),
     new webpack.ProvidePlugin({
-      'hljs': 'highlight.js',
       'Reveal': 'reveal.js'
     }),
 

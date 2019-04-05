@@ -158,6 +158,7 @@
       // TODO: plugin borked, workaround is to use hljs directly
      // { src: require('reveal.js/plugin/highlight/highlight.js'), async: true }, // code highlighting
       { src: require('reveal.js/plugin/notes/notes.js'), async: true },
+      { src: require('reveal.js/plugin/zoom-js/zoom.js'), async: true }
     ]
   });
 
