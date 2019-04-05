@@ -22,8 +22,9 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "highlight.js": "^9.15.6",
     "lodash": "^4.17.11",
-    "reveal.js": "^3.7.0"
+    "reveal.js": "^3.8.0"
   },
   "engines": {
     "node": ">=5.0"

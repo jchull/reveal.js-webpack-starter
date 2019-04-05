@@ -114,6 +114,10 @@ var config = {
       // filename: "[name].css",
       // chunkFilename: "[id].css"
     }),
+    new webpack.ProvidePlugin({
+      'hljs': 'highlight.js',
+      'Reveal': 'reveal.js'
+    }),
 
     // use for development time hot-swap of only modified modules that the webpack client will load up
     new webpack.HotModuleReplacementPlugin()
