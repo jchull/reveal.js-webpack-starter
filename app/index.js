@@ -1,15 +1,15 @@
 // include index.html for webpack to load
 require('./index.html');
+require('./style.css');
+
 require('reveal.js');
 
-import(/* webpackPrefetch: true */ 'reveal.js/css/reveal.css');
-import(/* webpackPrefetch: true */ 'reveal.js/css/theme/night.css');
-import(/* webpackPrefetch: true */ 'reveal.js/lib/css/monokai.css'); // for code colors
+require(/* webpackPrefetch: true */ 'reveal.js/css/reveal.css');
+require(/* webpackPrefetch: true */ 'reveal.js/css/theme/night.css');
+require(/* webpackPrefetch: true */ 'reveal.js/lib/css/monokai.css'); // for code colors
 
-// import  'script-loader!reveal.js/plugin/highlight/highlight'
-const hljs = require('highlight.js');
+require('reveal.js/plugin/zoom-js/zoom.js');
 
-hljs.initHighlightingOnLoad();
 
 Reveal.initialize({
   // Display presentation control arrows
@@ -34,7 +34,7 @@ Reveal.initialize({
 
   // Add the current slide number to the URL hash so that reloading the
   // page/copying the URL will return you to the same slide
-  hash: false,
+  hash: true,
 
   // Push each slide change to the browser history. Implies `hash: true`
   history: false,
@@ -154,16 +154,19 @@ Reveal.initialize({
   // The display mode that will be used to show slides
   display: 'block',
 
+  //
+  // disableLayout: true,
+
   // optional dependencies
   dependencies: [
     {
-      src: require('reveal.js/plugin/notes/notes.js'),
-      async: true
-    },
-    {
-      src: require('reveal.js/plugin/zoom-js/zoom.js'),
+      src: require('imports-loader?reveal.js/plugin/zoom-js/zoom.js'),
       async: true
     }
   ]
 });
 
+
+const hljs = require('highlight.js');
+
+hljs.initHighlightingOnLoad();

@@ -8,10 +8,12 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "expose-loader": "^0.7.5",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
+    "imports-loader": "^0.8.0",
     "mini-css-extract-plugin": "^0.9.0",
     "path": "^0.12.7",
     "raw-loader": "^4.0.0",

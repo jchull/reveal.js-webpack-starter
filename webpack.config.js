@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ROOT = path.resolve(__dirname);
 
@@ -16,6 +17,7 @@ const config = {
     publicPath: '/',
     filename: 'presentation.bundle.js'
   },
+
   module: {
     rules: [
       {
@@ -50,16 +52,8 @@ const config = {
         use: 'svg-url-loader?limit=10000&mimetype=image/svg+xml'
       },
       {
-        test: /\.html$/,
-        use: 'html-loader'
-      },
-      {
-        test: /\.jpg$/,
-        use: 'file-loader'
-      },
-      {
-        test: /\.png$/,
-        use: 'url-loader?mimetype=image/png'
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        use: 'url-loader'
       },
       {
         test: /\.css$/,
@@ -67,7 +61,7 @@ const config = {
       },
       {
         test: /index\.html/,
-        use: 'file-loader?name=[name].[ext]'
+        use: ['html-loader', 'file-loader?name=[name].[ext]']
       }
     ]
   },
@@ -75,7 +69,12 @@ const config = {
     new CleanWebpackPlugin({}),
     new webpack.optimize.OccurrenceOrderPlugin(),
     // use for development time hot-swap of only modified modules that the webpack client will load up
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([{
+      from: 'images',
+      to: 'images'
+    }
+    ])
   ],
   devServer: {
     contentBase: APP
