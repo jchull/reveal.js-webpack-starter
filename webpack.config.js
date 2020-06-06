@@ -70,11 +70,13 @@ const config = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     // use for development time hot-swap of only modified modules that the webpack client will load up
     new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin([{
-      from: 'images',
-      to: 'images'
-    }
-    ])
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'images',
+        to: 'images'
+      }
+      ]
+    })
   ],
   devServer: {
     contentBase: APP

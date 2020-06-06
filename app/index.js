@@ -4,11 +4,11 @@ require('./style.css');
 
 require('reveal.js');
 
-require(/* webpackPrefetch: true */ 'reveal.js/css/reveal.css');
-require(/* webpackPrefetch: true */ 'reveal.js/css/theme/night.css');
-require(/* webpackPrefetch: true */ 'reveal.js/lib/css/monokai.css'); // for code colors
+require(/* webpackPrefetch: true */ 'reveal.js/dist/reveal.css');
+require(/* webpackPrefetch: true */ 'reveal.js/dist/theme/night.css');
+// require(/* webpackPrefetch: true */ 'reveal.js/lib/css/monokai.css'); // for code colors
 
-require('reveal.js/plugin/zoom-js/zoom.js');
+require('reveal.js/plugin/zoom/zoom.js');
 
 
 Reveal.initialize({
