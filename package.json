@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "highlight.js": "^10.0.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "reveal.js": "^4.0.2"
   },
   "engines": {
