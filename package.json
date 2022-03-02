@@ -28,7 +28,7 @@
   "dependencies": {
     "highlight.js": "^10.0.3",
     "lodash": "^4.17.15",
-    "reveal.js": "^4.0.2"
+    "reveal.js": "^4.3.0"
   },
   "engines": {
     "node": ">=5.0"
